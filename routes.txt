@@ -1,0 +1,15 @@
++--------+-----------+---------------------+--------------+--------------------------------------------+--------------+
+| Domain | Method    | URI                 | Name         | Action                                     | Middleware   |
++--------+-----------+---------------------+--------------+--------------------------------------------+--------------+
+|        | GET|HEAD  | /                   |              | Closure                                    | web          |
+|        | GET|HEAD  | api/tabs            | tabs.index   | App\Http\Controllers\TabController@index   | api          |
+|        | POST      | api/tabs            | tabs.store   | App\Http\Controllers\TabController@store   | api          |
+|        | GET|HEAD  | api/tabs/create     | tabs.create  | App\Http\Controllers\TabController@create  | api          |
+|        | GET|HEAD  | api/tabs/{id}/rows  |              | App\Http\Controllers\TabController@rows    | api          |
+|        | GET|HEAD  | api/tabs/{tab}      | tabs.show    | App\Http\Controllers\TabController@show    | api          |
+|        | PUT|PATCH | api/tabs/{tab}      | tabs.update  | App\Http\Controllers\TabController@update  | api          |
+|        | DELETE    | api/tabs/{tab}      | tabs.destroy | App\Http\Controllers\TabController@destroy | api          |
+|        | GET|HEAD  | api/tabs/{tab}/edit | tabs.edit    | App\Http\Controllers\TabController@edit    | api          |
+|        | GET|HEAD  | api/test            |              | App\Http\Controllers\TestController@index  | api          |
+|        | GET|HEAD  | api/user            |              | Closure                                    | api,auth:api |
++--------+-----------+---------------------+--------------+--------------------------------------------+--------------+
